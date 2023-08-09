@@ -2,11 +2,12 @@ const modal = document.getElementById('modal');
 const closeModalBtn = document.getElementById('close-modal');
 const realSubmitBtn = document.getElementById('realSubmit');
 const fileInput = document.getElementById('chooseFile');
-
+var container;
 
 closeModalBtn.addEventListener('click', () => {
 	modal.style.display = "none";
 	document.body.style.overflow = "auto";
+	container.innerHTML = '';
 })
 
 realSubmitBtn.onclick = uploadFile;
@@ -33,9 +34,8 @@ function loadFile(input) {
 	var file = input.files[0];
 
 	var newImage = document.createElement("img");
-	newImage.setAttribute("class", 'img');
-
+	newImage.setAttribute("class", 'image-show');
 	newImage.src = URL.createObjectURL(file);
-	var container = document.getElementById('image-show');
+	container = document.getElementById('image-show');
 	container.appendChild(newImage);
 };

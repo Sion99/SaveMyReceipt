@@ -4,37 +4,45 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>영수증 Check!</title>
-	<link rel="stylesheet" href="style.css">
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-	<article id="c884a8ca-5278-4ba1-b1c3-225268e09e80" class="page sans">
-		<header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_8.png"
-				style="object-position:center 70%" />
-			<div class="page-header-icon page-header-icon-with-cover"><span class="icon">🧾</span></div>
-			<h1 class="page-title">영수증 Check!</h1>
-		</header>
-		<div class="page-body">
-			<form method="post" enctype="multipart/form-data">
-				<div class="button">
-					<label for="chooseFile">
-						<h1 id="0f4659c3-1ce7-441b-b3bd-b850ece526b0" class="">📸 여기를 클릭! 📸</h1>
-					</label>
+	<div class = "receipt-box">
+		<form method="post" enctype="multipart/form-data">
+			<ul class = "mainlist">
+				<li class = "uploadment">
+					<h2>영수증 사진을 업로드 해주세요.</h2>
+				</li>
+				<li>
+					<h1 class ="titlename" >영수증 Check!</h1>
+				</li>
+				<li class = "ment">어떻게 돌아가는거냐면요 이렇게 저렇게 멘트생각<br>어떻게 돌아가는거냐면요 이렇게 저렇게 멘트생각</li>
+			
+				<div class = "cambox">
+					<div class="cambutton">
+						<label for="chooseFile">
+							<h1 id="0f4659c3-1ce7-441b-b3bd-b850ece526b0" class="clickment">📸</h1>
+						</label>
+					</div>
 				</div>
-				<input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
-			</form>
-			<div class="modal" id="modal">
-				<h2>이미지 미리보기</h2>
+				<div class = "lastment">문의사항이 필요하시면 언제든지 멘트생각 멘트생각 문의사항이 필요하시면 언제든지 멘트생각 멘트생각</div>
+			</ul>
+			<input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
+		</form>
+
+		<div class="modal" id="modal">
+			<h2>이미지 미리보기</h2>
 				<div class="image-show" id="image-show"></div>
 				<p>이미지 확인 후 제출 부탁드립니다</p>
-				<div class="button-container">
-					<button class="button submit" id="realSubmit">제출</button>
-					<button class="button close" id="close-modal">닫기</button>
-				</div>
+			<div class="button-container">
+				<button class="button submit" id="realSubmit">제출</button>
+				<button class="button close" id="close-modal">닫기</button>
 			</div>
 		</div>
-	</article>
+	</div>
 	<script src="receipt.js"></script>
 </body>
 
