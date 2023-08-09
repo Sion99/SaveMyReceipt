@@ -15,7 +15,7 @@ function uploadFile() {
 	const formData = new FormData;
 	var file = fileInput.files[0];
 	formData.append('file', file);
-	fetch('http://127.0.0.1:8000/post', {
+	fetch('http://ec2-13-124-154-116.ap-northeast-2.compute.amazonaws.com:8000/post', {
 		method: 'POST',
 		cache: 'no-cache',
 		body: formData // body 부분에 폼데이터 변수를 할당
