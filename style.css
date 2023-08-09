@@ -16,7 +16,7 @@ body {
 
 .mainlist{
 	list-style: none;
-    max-width: 50vw;
+    max-width: 60vw;
     width: 100%;
 }
 
@@ -51,16 +51,22 @@ body {
 
 .cambutton{
 	background-color: rgb(223, 223, 223);
-	width: 5vw;
-	height: 5vw;
+	width: 8vw;
+	height: 8vw;
+	display: flex;
 	text-align: center;
 	justify-content: center;
-	display: flex;
+	align-items: center;
 	border-radius: 50%;
 }
 
 .clickment{
-	color: #ffffff;
+	width: 4vw;
+	height: 4vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
 }
 
 .lastment{
@@ -97,4 +103,37 @@ body {
 	height: 50vh;
 	overflow: hidden;
 	object-fit: scale-down;
+}
+
+
+@media ( max-width: 1024px ) {
+	.receipt-box{
+		width:80vw;
+		height:75vh;
+	}
+}
+
+@media ( max-width: 768px ) {
+	.mainlist{
+		width: 100%;
+	}
+
+	.uploadment{
+		font-size: 10px;
+	}
+	
+	.titlename{
+		font-size: 40px;
+	}
+	
+	.ment{
+		padding-top: 1vh;
+		font-size: 10px;
+		padding-bottom: 1vh;
+		color : #a8a8a8;
+	}
+
+	.lastment{
+		font-size: 10px;
+	}
 }
