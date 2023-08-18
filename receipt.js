@@ -13,7 +13,7 @@ closeModalBtn.addEventListener('click', () => {
 realSubmitBtn.onclick = sendImageToEC2;
 
 async function sendImageToEC2() {
-	const ec2Url = 'http://ec2-13-124-154-116.ap-northeast-2.compute.amazonaws.com:8000/post'; // EC2 인스턴스의 URL로 대체
+	const ec2Url = 'https://sions.me/post'; // EC2 인스턴스의 URL로 대체
 
 	// Create a FormData object and append the image file
 	const formData = new FormData();
