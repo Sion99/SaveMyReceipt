@@ -1,19 +1,5 @@
-import uuid, os
+import uvicorn
+from app import main
 
-from fastapi import FastAPI
-from fastapi import FastAPI, File, UploadFile
-
-app = FastAPI()
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
-
-@app.post("/post")
-async def save_images(file: UploadFile):
-    UPLOAD_DIR = './images'
-    content = await file.read()
-    filename = f"{str(uuid.uuid4())}.jpg"
-    with open(os.path.join(UPLOAD_DIR, filename), "wb") as fp:
-        fp.write(content)
-    return {"filename" : filename}
+if __name__ == "__main__":
+    uvicorn.run(main, host="0.0.0.0", port=8000)
